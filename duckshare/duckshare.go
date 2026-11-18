@@ -49,6 +49,8 @@ type Connector struct {
 	// pgsocket when set the owner also serves the file with the postgres wire protocol on this unix socket,
 	// so clients that are not written in go, i.e. editor extensions, can use it.
 	pgsocket string
+	// init statements run on every connection the owner opens to the file.
+	init []string
 
 	m     sync.Mutex
 	owned *ownedfile
@@ -77,6 +79,13 @@ type Option func(*Connector)
 // process owns it, so clients that are not written in go, i.e. editor extensions, can use it.
 func WithPostgresSocket(socket string) Option {
 	return func(t *Connector) { t.pgsocket = socket }
+}
+
+// WithInit runs statements on every connection the owner opens to the file, i.e. an ATTACH. state held by the
+// duckdb instance is lost when the owner goes away and another process takes the file over, this is what
+// restores it, so the statements must be safe to repeat.
+func WithInit(statements ...string) Option {
+	return func(t *Connector) { t.init = append(t.init, statements...) }
 }
 
 // WithLockWait sets the longest a connection waits for another process to finish connecting, defaults to 10s.
@@ -167,7 +176,15 @@ func (t *Connector) Connect(ctx context.Context) (driver.Conn, error) {
 // own opens the file and serves it. the socket is listening before returning, so by the time the lock is
 // released others find it.
 func (t *Connector) own(socket string) error {
-	connector, err := duckdb.NewConnector(t.path, nil)
+	connector, err := duckdb.NewConnector(t.path, func(execer driver.ExecerContext) error {
+		for _, stmt := range t.init {
+			if _, err := execer.ExecContext(context.Background(), stmt, nil); err != nil {
+				return errorsx.Wrap(err, "unable to initialize the connection")
+			}
+		}
+
+		return nil
+	})
 	if err != nil {
 		return errorsx.Wrap(err, "unable to open the database")
 	}
