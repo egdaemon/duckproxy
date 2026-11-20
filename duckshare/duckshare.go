@@ -282,6 +282,18 @@ func (t *Connector) Close() error {
 		return nil
 	}
 
+	// hold the connect lock until the file is released. otherwise a process taking over finds the socket gone
+	// while this one still holds the file and fails to open it.
+	lctx, done := context.WithTimeout(context.Background(), t.lockwait)
+	defer done()
+
+	lock := flock.New(t.lockpath)
+	if locked, err := lock.TryLockContext(lctx, t.lockpoll); err != nil || !locked {
+		errorsx.Log(errorsx.Wrap(errors.Join(err, lctx.Err()), "unable to lock the database to close it"))
+	} else {
+		defer func() { errorsx.Log(lock.Unlock()) }()
+	}
+
 	o := t.owned
 	t.owned = nil
 
