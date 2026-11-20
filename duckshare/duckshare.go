@@ -8,6 +8,7 @@ import (
 	"database/sql/driver"
 	"encoding/hex"
 	"errors"
+	"fmt"
 	"io"
 	"maps"
 	"net"
@@ -96,10 +97,13 @@ func WithLockWait(d time.Duration) Option {
 // WithLockPath sets the file used to serialize connecting.
 //
 // Deprecated: exists so existing deployments keep the lock file they already use, new callers should use the
-// default, the database path with the suffix ".duckproxy.lock".
+// default, the database path with the suffix ".lock".
 func WithLockPath(path string) Option {
 	return func(t *Connector) { t.lockpath = path }
 }
+
+// lock the path of the file lock serializing connecting to the database at path.
+func lock(path string) string { return fmt.Sprintf("%s.lock", path) }
 
 // New shares the duckdb file at db between processes. sockdir is the directory, common to all the processes
 // sharing the file, holding the socket the owner serves it on.
@@ -107,7 +111,7 @@ func New(sockdir, db string, opts ...Option) *Connector {
 	t := &Connector{
 		path:        db,
 		sockdir:     sockdir,
-		lockpath:    db + ".duckproxy.lock",
+		lockpath:    lock(db),
 		lockwait:    10 * time.Second,
 		lockpoll:    25 * time.Millisecond,
 		dialwait:    time.Second,

@@ -169,7 +169,7 @@ func TestConnector(t *testing.T) {
 
 	t.Run("lock path override is honoured", func(t *testing.T) {
 		path := filepath.Join(t.TempDir(), "shared.db")
-		lock := path + ".lock"
+		lock := path + ".custom.lock"
 
 		db := sql.OpenDB(duckshare.New(t.TempDir(), path, duckshare.WithLockPath(lock)))
 		defer db.Close()
@@ -177,7 +177,7 @@ func TestConnector(t *testing.T) {
 
 		_, err := os.Stat(lock)
 		require.NoError(t, err)
-		_, err = os.Stat(path + ".duckproxy.lock")
+		_, err = os.Stat(path + ".lock")
 		require.ErrorIs(t, err, os.ErrNotExist)
 	})
 }

@@ -26,7 +26,7 @@ func TestClose(t *testing.T) {
 		require.Len(t, sockets, 1)
 
 		// a process connecting holds the lock, closing must wait for it instead of tearing the socket down.
-		lock := flock.New(path + ".duckproxy.lock")
+		lock := flock.New(path + ".lock")
 		locked, err := lock.TryLock()
 		require.NoError(t, err)
 		require.True(t, locked)
