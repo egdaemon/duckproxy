@@ -3,7 +3,7 @@ module github.com/egdaemon/duckproxy/duckkong
 go 1.27.2
 
 require (
-	github.com/egdaemon/duckproxy/usqlx v0.0.0
+	github.com/egdaemon/duckproxy/usqlx v0.0.0-20261120182532-964887dc2a88
 	github.com/mattn/go-isatty v0.0.24
 	github.com/stretchr/testify v1.12.1
 	github.com/xo/dburl v0.25.1
