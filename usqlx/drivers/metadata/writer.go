@@ -9,8 +9,8 @@ import (
 
 	"github.com/xo/dburl"
 	"github.com/xo/tblfmt"
-	"github.com/xo/usql/env"
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/env"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 )
 
 // DB is the common interface for database operations, compatible with

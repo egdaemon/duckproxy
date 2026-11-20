@@ -11,10 +11,10 @@ import (
 	"strings"
 
 	_ "github.com/duckdb/duckdb-go/v2" // DRIVER
-	"github.com/xo/usql/drivers"
-	"github.com/xo/usql/drivers/metadata"
-	infos "github.com/xo/usql/drivers/metadata/informationschema"
-	mymeta "github.com/xo/usql/drivers/metadata/mysql"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
+	infos "github.com/egdaemon/duckproxy/usqlx/drivers/metadata/informationschema"
+	mymeta "github.com/egdaemon/duckproxy/usqlx/drivers/metadata/mysql"
 )
 
 type metaReader struct {

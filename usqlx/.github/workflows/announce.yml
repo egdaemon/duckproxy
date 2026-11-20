@@ -95,7 +95,7 @@ jobs:
         run: |
           export WORKDIR=$(mktemp -d /tmp/homebrew-xo.XXXXXX)
           export REPO_PATH=$WORKDIR/homebrew-xo
-          wget -O $WORKDIR/archive.tar.gz https://github.com/xo/usql/archive/${VER}.tar.gz
+          wget -O $WORKDIR/archive.tar.gz https://github.com/egdaemon/duckproxy/usqlx/archive/${VER}.tar.gz
           export SHA256SUM=$(sha256sum $WORKDIR/archive.tar.gz|awk '{print $1}')
           export CHANGELOG=$(
             curl \
@@ -108,7 +108,7 @@ jobs:
           git clone $HOMEBREW_REPO $REPO_PATH
           git -C $REPO_PATH config user.name "$AUTHOR_NAME"
           git -C $REPO_PATH config user.email "$AUTHOR_EMAIL"
-          sed -i "s%url \".*$%url \"https://github.com/xo/usql/archive/${VER}.tar.gz\"%" $REPO_PATH/Formula/usql.rb
+          sed -i "s%url \".*$%url \"https://github.com/egdaemon/duckproxy/usqlx/archive/${VER}.tar.gz\"%" $REPO_PATH/Formula/usql.rb
           sed -i "s/sha256 \".*$/sha256 \"$SHA256SUM\"/" $REPO_PATH/Formula/usql.rb
           git -C $REPO_PATH add Formula/usql.rb
           git -C $REPO_PATH commit -m "$(printf %b "Update usql version to ${VER}\n\n${CHANGELOG}")"
@@ -123,5 +123,5 @@ jobs:
         run: |
           curl \
             -H 'Content-Type: application/json' \
-            -d '{"username": "usql", "content": "> *usql ${{ github.ref_name }}* has been released!\n\nGet it here: https://github.com/xo/usql/releases/${{ github.ref_name }}"}' \
+            -d '{"username": "usql", "content": "> *usql ${{ github.ref_name }}* has been released!\n\nGet it here: https://github.com/egdaemon/duckproxy/usqlx/releases/${{ github.ref_name }}"}' \
             ${{ secrets.DISCORD_WEBHOOK_URL }}

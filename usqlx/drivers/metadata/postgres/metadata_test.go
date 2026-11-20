@@ -11,9 +11,9 @@ import (
 
 	dt "github.com/ory/dockertest/v3"
 	dc "github.com/ory/dockertest/v3/docker"
-	"github.com/xo/usql/drivers/metadata"
-	"github.com/xo/usql/drivers/metadata/postgres"
-	_ "github.com/xo/usql/drivers/postgres"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata/postgres"
+	_ "github.com/egdaemon/duckproxy/usqlx/drivers/postgres"
 )
 
 type Database struct {

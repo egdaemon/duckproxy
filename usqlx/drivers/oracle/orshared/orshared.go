@@ -10,10 +10,10 @@ import (
 	"strings"
 
 	"github.com/xo/dburl"
-	"github.com/xo/usql/drivers"
-	"github.com/xo/usql/drivers/metadata"
-	orameta "github.com/xo/usql/drivers/metadata/oracle"
-	"github.com/xo/usql/env"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
+	orameta "github.com/egdaemon/duckproxy/usqlx/drivers/metadata/oracle"
+	"github.com/egdaemon/duckproxy/usqlx/env"
 )
 
 // Register registers an oracle driver.

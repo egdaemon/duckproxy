@@ -5,7 +5,7 @@ package hive
 
 import (
 	"github.com/xo/dburl"
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 	_ "sqlflow.org/gohive" // DRIVER
 )
 

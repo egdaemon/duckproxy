@@ -20,9 +20,9 @@ import (
 	dt "github.com/ory/dockertest/v3"
 	dc "github.com/ory/dockertest/v3/docker"
 	_ "github.com/trinodb/trino-go-client/trino"
-	"github.com/xo/usql/drivers/metadata"
-	infos "github.com/xo/usql/drivers/metadata/informationschema"
-	_ "github.com/xo/usql/drivers/postgres"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
+	infos "github.com/egdaemon/duckproxy/usqlx/drivers/metadata/informationschema"
+	_ "github.com/egdaemon/duckproxy/usqlx/drivers/postgres"
 )
 
 type Database struct {

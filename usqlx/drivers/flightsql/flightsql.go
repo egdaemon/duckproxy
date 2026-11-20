@@ -4,8 +4,8 @@
 package flightsql
 
 import (
-	_ "github.com/apache/arrow/go/v17/arrow/flight/flightsql/driver" // DRIVER
-	"github.com/xo/usql/drivers"
+	_ "github.com/apache/arrow-go/v18/arrow/flight/flightsql/driver" // DRIVER
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

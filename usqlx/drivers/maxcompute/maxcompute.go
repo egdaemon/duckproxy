@@ -4,7 +4,7 @@
 package maxcompute
 
 import (
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 	_ "sqlflow.org/gomaxcompute" // DRIVER
 )
 

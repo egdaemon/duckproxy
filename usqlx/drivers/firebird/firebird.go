@@ -7,7 +7,7 @@ import (
 	"context"
 
 	_ "github.com/nakagami/firebirdsql" // DRIVER: firebirdsql
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

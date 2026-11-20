@@ -5,7 +5,7 @@ package spanner
 
 import (
 	_ "github.com/googleapis/go-sql-spanner" // DRIVER
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/thda/tds" // DRIVER: tds
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

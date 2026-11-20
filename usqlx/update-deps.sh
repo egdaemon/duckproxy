@@ -15,10 +15,10 @@
 # another module's requirements pull it forward.
 #
 # Never add an exclude or a replace directive to this module's go.mod. Both are
-# refused by `go install github.com/xo/usql@<version>`, which treats the named
+# refused by `go install github.com/egdaemon/duckproxy/usqlx@<version>`, which treats the named
 # module as the main module and rejects any directive that would make it
 # resolve differently. An exclude directive broke every `go install` of v0.21.5.
-# See https://github.com/xo/usql/issues/590, and issue 394 for the same fault
+# See https://github.com/egdaemon/duckproxy/usqlx/issues/590, and issue 394 for the same fault
 # in 2023.
 #
 # usage: update-deps.sh [-n] [-k] [-V] [-x] [extra go get flags]
@@ -38,7 +38,7 @@ SKIP=(
   github.com/opencontainers/runc
   # v5.0.0+incompatible does not compile. Pinned to v3.5.10+incompatible by an
   # ordinary require in go.mod, because an exclude directive cannot be used
-  # here. See the note above and https://github.com/xo/usql/issues/590.
+  # here. See the note above and https://github.com/egdaemon/duckproxy/usqlx/issues/590.
   github.com/uber-go/tally
 )
 
@@ -134,7 +134,7 @@ if [ "$VERIFY" = "1" ]; then
     (set -x; $SRC/build.sh -b) || OK=0
   fi
   if [ "$OK" = "0" ]; then
-    echo -e "\n\nERROR: verification failed -- add the offending module to SKIP in $0 and pin it with an ordinary require in go.mod. Do not use an exclude or a replace directive: they break 'go install github.com/xo/usql@<version>'."
+    echo -e "\n\nERROR: verification failed -- add the offending module to SKIP in $0 and pin it with an ordinary require in go.mod. Do not use an exclude or a replace directive: they break 'go install github.com/egdaemon/duckproxy/usqlx@<version>'."
     restore
     exit 1
   fi

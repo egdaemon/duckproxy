@@ -3,7 +3,7 @@ package stmt
 import (
 	"unicode"
 
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 )
 
 // Params holds information about command parameters.

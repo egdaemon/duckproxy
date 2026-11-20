@@ -16,7 +16,7 @@ import (
 
 	syslocale "github.com/jeandeaual/go-locale"
 	"github.com/xo/terminfo"
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 	"github.com/yookoala/realpath"
 )
 

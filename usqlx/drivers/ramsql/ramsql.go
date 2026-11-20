@@ -5,7 +5,7 @@ package ql
 
 import (
 	_ "github.com/proullon/ramsql/driver" // DRIVER
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

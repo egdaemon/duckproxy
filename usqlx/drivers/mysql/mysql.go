@@ -13,9 +13,9 @@ import (
 	"strconv"
 
 	"github.com/go-sql-driver/mysql" // DRIVER
-	"github.com/xo/usql/drivers"
-	"github.com/xo/usql/drivers/metadata"
-	mymeta "github.com/xo/usql/drivers/metadata/mysql"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
+	mymeta "github.com/egdaemon/duckproxy/usqlx/drivers/metadata/mysql"
 )
 
 func init() {

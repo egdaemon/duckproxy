@@ -15,10 +15,10 @@ import (
 	"github.com/jackc/pgx/v5/pgconn"
 	"github.com/jackc/pgx/v5/stdlib" // DRIVER
 	"github.com/xo/dburl"
-	"github.com/xo/usql/drivers"
-	"github.com/xo/usql/drivers/metadata"
-	pgmeta "github.com/xo/usql/drivers/metadata/postgres"
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
+	pgmeta "github.com/egdaemon/duckproxy/usqlx/drivers/metadata/postgres"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 )
 
 func init() {

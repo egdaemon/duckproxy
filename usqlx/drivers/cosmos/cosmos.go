@@ -5,7 +5,7 @@ package cosmos
 
 import (
 	_ "github.com/btnguyen2k/gocosmos" // DRIVER
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

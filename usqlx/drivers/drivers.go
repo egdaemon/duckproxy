@@ -18,10 +18,10 @@ import (
 	"github.com/alecthomas/chroma/v2/lexers"
 	"github.com/gohxs/readline"
 	"github.com/xo/dburl"
-	"github.com/xo/usql/drivers/completer"
-	"github.com/xo/usql/drivers/metadata"
-	"github.com/xo/usql/stmt"
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/completer"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
+	"github.com/egdaemon/duckproxy/usqlx/stmt"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 )
 
 // DB is the common interface for database operations, compatible with

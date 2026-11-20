@@ -9,8 +9,8 @@ import (
 	"errors"
 
 	"github.com/sclgo/impala-go" // DRIVER
-	"github.com/xo/usql/drivers"
-	meta "github.com/xo/usql/drivers/metadata/impala"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
+	meta "github.com/egdaemon/duckproxy/usqlx/drivers/metadata/impala"
 )
 
 func init() {

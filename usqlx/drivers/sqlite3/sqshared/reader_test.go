@@ -16,7 +16,7 @@ import (
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/client"
 	"github.com/moby/go-archive"
-	"github.com/xo/usql/drivers/metadata"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
 )
 
 var (

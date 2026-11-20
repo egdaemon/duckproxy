@@ -2,10 +2,10 @@ Contributing to usql
 ====================
 
 Any contributions are welcome. If you found a bug, or a missing feature,
-take a look at existing [issues](https://github.com/xo/usql/issues)
+take a look at existing [issues](https://github.com/egdaemon/duckproxy/usqlx/issues)
 and create a new one if needed.
 
-You can also open up a [pull request](https://github.com/xo/usql/pulls) (PR)
+You can also open up a [pull request](https://github.com/egdaemon/duckproxy/usqlx/pulls) (PR)
 with code or documentation changes.
 
 # Adding a new driver
@@ -31,7 +31,7 @@ If the database has a `information_schema` schema, with standard tables like `ta
 you can use an existing reader from the `drivers/informationschema` package.
 Since there are usually minor difference in objects defined in that schema in different databases,
 there's a set of options to configure this reader. Refer to
-the [package docs](https://pkg.go.dev/github.com/xo/usql/drivers/metadata/informationschema) for details.
+the [package docs](https://pkg.go.dev/github.com/egdaemon/duckproxy/usqlx/drivers/metadata/informationschema) for details.
 
 If you can't use the `informationschema` reader, consider implementing a new one.
 It should implement at least one of the following reader interfaces:

@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/kenshaw/colors"
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 )
 
 type ChartConfig struct {

@@ -8,7 +8,7 @@
   <a href="#database-support" title="Database Support">Database Support</a> |
   <a href="#using" title="Using">Using</a> |
   <a href="#features-and-compatibility" title="Features and Compatibility">Features and Compatibility</a> |
-  <a href="https://github.com/xo/usql/releases" title="Releases">Releases</a> |
+  <a href="https://github.com/egdaemon/duckproxy/usqlx/releases" title="Releases">Releases</a> |
   <a href="#contributing" title="Contributing">Contributing</a>
 </div>
 
@@ -36,16 +36,16 @@ for other databases.
 [![Releases][release-status]][Releases]
 [![Discord Discussion][discord-status]][discord]
 
-[usql-ci]: https://github.com/xo/usql/actions/workflows/test.yml "Test CI"
-[usql-ci-status]: https://github.com/xo/usql/actions/workflows/test.yml/badge.svg "Test CI"
-[goref-usql]: https://pkg.go.dev/github.com/xo/usql "Go Reference"
-[goref-usql-status]: https://pkg.go.dev/badge/github.com/xo/usql.svg "Go Reference"
+[usql-ci]: https://github.com/egdaemon/duckproxy/usqlx/actions/workflows/test.yml "Test CI"
+[usql-ci-status]: https://github.com/egdaemon/duckproxy/usqlx/actions/workflows/test.yml/badge.svg "Test CI"
+[goref-usql]: https://pkg.go.dev/github.com/egdaemon/duckproxy/usqlx "Go Reference"
+[goref-usql-status]: https://pkg.go.dev/badge/github.com/egdaemon/duckproxy/usqlx.svg "Go Reference"
 [release-status]: https://img.shields.io/github/v/release/xo/usql?display_name=tag&sort=semver "Latest Release"
 [discord]: https://discord.gg/WDWAgXwJqN "Discord Discussion"
 [discord-status]: https://img.shields.io/discord/829150509658013727.svg?label=Discord&logo=Discord&colorB=7289da&style=flat-square "Discord Discussion"
 [installing]: #installing "Installing"
 [databases]: #database-support "Database Support"
-[releases]: https://github.com/xo/usql/releases "Releases"
+[releases]: https://github.com/egdaemon/duckproxy/usqlx/releases "Releases"
 
 ## Installing
 
@@ -131,10 +131,10 @@ Install `usql` in the usual Go fashion:
 
 ```sh
 # install latest usql version with base drivers
-$ go install github.com/xo/usql@latest
+$ go install github.com/egdaemon/duckproxy/usqlx@latest
 
 # alternately, install usql with most drivers (see below for info about build tags)
-$ go install -tags most github.com/xo/usql@latest
+$ go install -tags most github.com/egdaemon/duckproxy/usqlx@latest
 ```
 
 See [below for information](#building) on `usql` build tags.
@@ -187,7 +187,7 @@ Server, Oracle, CSVQ will be included in the build:
 ```sh
 # build/install with base drivers (PostgreSQL, MySQL, SQLite3, Microsoft SQL Server,
 # Oracle, CSVQ)
-$ go install github.com/xo/usql@master
+$ go install github.com/egdaemon/duckproxy/usqlx@master
 ```
 
 Other databases can be enabled by specifying the [build tag for their database
@@ -195,7 +195,7 @@ driver][databases].
 
 ```sh
 # build/install with base, Avatica, and ODBC drivers
-$ go install -tags 'avatica odbc' github.com/xo/usql@master
+$ go install -tags 'avatica odbc' github.com/egdaemon/duckproxy/usqlx@master
 ```
 
 For every build tag `<driver>`, there is also a `no_<driver>` build tag
@@ -203,7 +203,7 @@ that will disable the driver:
 
 ```sh
 # build/install most drivers, excluding Avatica, Couchbase, and PostgreSQL
-$ go install -tags 'most no_avatica no_couchbase no_postgres' github.com/xo/usql@master
+$ go install -tags 'most no_avatica no_couchbase no_postgres' github.com/egdaemon/duckproxy/usqlx@master
 ```
 
 By specifying the build tags `most` or `all`, the build will include most, and
@@ -211,10 +211,10 @@ all SQL drivers, respectively:
 
 ```sh
 # build/install with most drivers (excludes CGO drivers and problematic drivers)
-$ go install -tags most github.com/xo/usql@master
+$ go install -tags most github.com/egdaemon/duckproxy/usqlx@master
 
 # build/install all drivers (includes CGO drivers and problematic drivers)
-$ go install -tags all github.com/xo/usql@master
+$ go install -tags all github.com/egdaemon/duckproxy/usqlx@master
 ```
 
 ## Database Support
@@ -226,7 +226,7 @@ The list of drivers that `usql` was built with can be displayed with the
 [`\drivers` command][commands]:
 
 ```sh
-$ cd $GOPATH/src/github.com/xo/usql
+$ cd $GOPATH/src/github.com/egdaemon/duckproxy/usqlx
 
 # build excluding the base drivers, and including cassandra and moderncsqlite
 $ go build -tags 'no_postgres no_oracle no_sqlserver no_sqlite3 cassandra moderncsqlite'
@@ -1547,7 +1547,7 @@ contributing, see CONTRIBUTING.md](CONTRIBUTING.md).
 [chroma]: https://github.com/alecthomas/chroma
 [chroma-formatter]: https://github.com/alecthomas/chroma#formatters
 [chroma-style]: https://xyproto.github.io/splash/docs/all.html
-[help-wanted]: https://github.com/xo/usql/issues?q=is:open+is:issue+label:%22help+wanted%22
+[help-wanted]: https://github.com/egdaemon/duckproxy/usqlx/issues?q=is:open+is:issue+label:%22help+wanted%22
 [aur]: https://aur.archlinux.org/packages/usql
 [yay]: https://github.com/Jguer/yay
 [arch-makepkg]: https://wiki.archlinux.org/title/makepkg

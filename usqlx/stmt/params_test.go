@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/xo/usql/env"
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/env"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 )
 
 func TestDecodeParamsGetRaw(t *testing.T) {

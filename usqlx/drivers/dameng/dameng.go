@@ -13,8 +13,8 @@ import (
 
 	_ "github.com/godoes/gorm-dameng/dm8" // DRIVER: dm
 	"github.com/xo/dburl"
-	"github.com/xo/usql/drivers"
-	"github.com/xo/usql/drivers/metadata"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
 )
 
 // init registers the DM8 driver's usql behavior. The dm, dm8, and dameng URL

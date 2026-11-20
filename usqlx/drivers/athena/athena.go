@@ -7,7 +7,7 @@ import (
 	"context"
 
 	_ "github.com/uber/athenadriver/go" // DRIVER: awsathena
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

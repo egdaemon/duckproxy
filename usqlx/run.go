@@ -19,11 +19,11 @@ import (
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 	"github.com/xo/dburl"
-	"github.com/xo/usql/env"
-	"github.com/xo/usql/handler"
-	"github.com/xo/usql/metacmd"
-	"github.com/xo/usql/rline"
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/env"
+	"github.com/egdaemon/duckproxy/usqlx/handler"
+	"github.com/egdaemon/duckproxy/usqlx/metacmd"
+	"github.com/egdaemon/duckproxy/usqlx/rline"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 )
 
 // ContextExecutor is the command context.

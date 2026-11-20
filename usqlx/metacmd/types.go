@@ -9,12 +9,12 @@ import (
 	"time"
 
 	"github.com/xo/dburl"
-	"github.com/xo/usql/drivers"
-	"github.com/xo/usql/drivers/metadata"
-	"github.com/xo/usql/env"
-	"github.com/xo/usql/rline"
-	"github.com/xo/usql/stmt"
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
+	"github.com/egdaemon/duckproxy/usqlx/env"
+	"github.com/egdaemon/duckproxy/usqlx/rline"
+	"github.com/egdaemon/duckproxy/usqlx/stmt"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 )
 
 // Handler is the shared interface for a command handler.

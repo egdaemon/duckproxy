@@ -3,7 +3,7 @@ package completer
 import (
 	"testing"
 
-	"github.com/xo/usql/drivers/metadata"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
 )
 
 func TestCompleter(t *testing.T) {

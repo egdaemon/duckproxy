@@ -7,9 +7,9 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/xo/usql/drivers"
-	"github.com/xo/usql/drivers/metadata"
-	mymeta "github.com/xo/usql/drivers/metadata/mysql"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
+	mymeta "github.com/egdaemon/duckproxy/usqlx/drivers/metadata/mysql"
 	_ "github.com/ziutek/mymysql/godrv" // DRIVER
 	"github.com/ziutek/mymysql/mysql"
 )

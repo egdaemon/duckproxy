@@ -18,7 +18,7 @@ import (
 	vertica "github.com/vertica/vertica-sql-go" // DRIVER
 	"github.com/vertica/vertica-sql-go/logger"
 	"github.com/xo/dburl"
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

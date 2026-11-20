@@ -14,8 +14,8 @@ import (
 
 	mssql "github.com/microsoft/go-mssqldb"
 	sqlserver "github.com/microsoft/go-mssqldb" // DRIVER
-	"github.com/xo/usql/drivers"
-	"github.com/xo/usql/drivers/metadata"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers/metadata"
 
 	// needed for azuresql authentication, named pipes, and shared memory transport protocols
 	_ "github.com/microsoft/go-mssqldb/azuread"

@@ -5,7 +5,7 @@ package h2
 
 import (
 	_ "github.com/jmrobles/h2go" // DRIVER
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

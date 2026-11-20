@@ -8,7 +8,7 @@ import (
 
 	_ "github.com/databricks/databricks-sql-go" // DRIVER
 	dberrs "github.com/databricks/databricks-sql-go/errors"
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

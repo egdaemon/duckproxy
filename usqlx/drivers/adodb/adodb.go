@@ -13,7 +13,7 @@ import (
 
 	_ "github.com/mattn/go-adodb" // DRIVER
 	"github.com/xo/dburl"
-	"github.com/xo/usql/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
 )
 
 func init() {

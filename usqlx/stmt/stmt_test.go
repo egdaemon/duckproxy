@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/xo/usql/env"
+	"github.com/egdaemon/duckproxy/usqlx/env"
 )
 
 func sl(n int, r rune) string {

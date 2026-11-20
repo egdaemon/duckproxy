@@ -3,8 +3,8 @@
 package metacmd
 
 import (
-	"github.com/xo/usql/stmt"
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/stmt"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 )
 
 // Metacmd represents a command and associated meta information about it.

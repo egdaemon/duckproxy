@@ -15,9 +15,9 @@ import (
 	"time"
 
 	"github.com/xo/dburl"
-	"github.com/xo/usql/drivers"
-	"github.com/xo/usql/env"
-	"github.com/xo/usql/text"
+	"github.com/egdaemon/duckproxy/usqlx/drivers"
+	"github.com/egdaemon/duckproxy/usqlx/env"
+	"github.com/egdaemon/duckproxy/usqlx/text"
 	"golang.org/x/exp/maps"
 )
 
