@@ -32,6 +32,8 @@ github.com/duckdb/duckdb-go-bindings/lib/windows-amd64 v0.10505.0 h1:DjqZl9rYreH
 github.com/duckdb/duckdb-go-bindings/lib/windows-amd64 v0.10505.0/go.mod h1:K25pJL26ARblGDeuAkrdblFvUen92+CwksLtPEHRqqQ=
 github.com/duckdb/duckdb-go/v2 v2.10505.0 h1:SWwvLn2Qx/RQSnQNupwgIF8VbnJ5A6OQU9lYb/mDETI=
 github.com/duckdb/duckdb-go/v2 v2.10505.0/go.mod h1:m0PW4J4FG9hlFlVdXi6Ds9owpyIDaBdE2jyce00fGcE=
+github.com/egdaemon/duckproxy/usqlx v0.0.0-20261120183610-afbab7aa8c71 h1:blb65Jyg6Bje/ahpEoV2KQowXZRG+c6lH1KWdWiA8cs=
+github.com/egdaemon/duckproxy/usqlx v0.0.0-20261120183610-afbab7aa8c71/go.mod h1:XD7RN4lR8X8eBnqJnKq5XEEMCsSR3Yxle1+NL/j4KOY=
 github.com/go-git/go-billy/v5 v5.9.1 h1:8U73XiOTfINdItHVa6z4Gv7ToObcZ6grkqQbLryLCdA=
 github.com/go-git/go-billy/v5 v5.9.1/go.mod h1:ExsU+jcGwXTBOnyilvAnEM1wug1IxHr4yP2ZXsNRtV0=
 github.com/go-viper/mapstructure/v2 v2.5.0 h1:vM5IJoUAy3d7zRSVtIwQgBj7BiWtMPfmPEgAXnvj1Ro=
